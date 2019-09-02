@@ -1,5 +1,5 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
-from myApp.models import Mlab
+from mLab.models import Mlab
 from .serializers import MlabSerializer
 from django_filters import rest_framework as filters
 
