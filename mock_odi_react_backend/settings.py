@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+import environ
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'corsheaders',
     'django_filters',
+    'accounts',
 
     'django_otp',
     'django_otp.plugins.otp_totp',

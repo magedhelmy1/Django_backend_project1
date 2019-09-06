@@ -12,6 +12,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 django-filter = "*"
 django-otp = "*"
+django-environ = "*"
 
 [requires]
 python_version = "3.6"
