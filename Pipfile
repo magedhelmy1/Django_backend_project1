@@ -13,6 +13,7 @@ django-cors-headers = "*"
 django-filter = "*"
 django-otp = "*"
 django-environ = "*"
+django-rest-knox = "*"
 
 [requires]
 python_version = "3.6"
