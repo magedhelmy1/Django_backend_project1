@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from myApp.models import Mlab
+from mLab.models import Mlab
 
 
 class MlabSerializer(serializers.ModelSerializer):
