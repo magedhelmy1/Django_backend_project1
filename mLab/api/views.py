@@ -2,9 +2,13 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from mLab.models import Mlab
 from .serializers import MlabSerializer
 from django_filters import rest_framework as filters
+from rest_framework import viewsets, permissions
 
 
 class MLabFilter(filters.FilterSet):
+    permission_classes = [
+        permissions.IsAuthenticated,
+    ]
     mLab_name = filters.CharFilter(field_name="mLab_name", lookup_expr='icontains')
     mLab_city_location = filters.CharFilter(field_name="mLab_city_location", lookup_expr='icontains')
     mLab_department = filters.CharFilter(field_name="mLab_department", lookup_expr='icontains')
@@ -19,6 +23,9 @@ class MLabFilter(filters.FilterSet):
 
 
 class MlabListView(ListAPIView):
+    permission_classes = [
+        permissions.IsAuthenticated,
+    ]
     queryset = Mlab.objects.all()
     serializer_class = MlabSerializer
     filter_backends = (filters.DjangoFilterBackend,)
@@ -26,5 +33,8 @@ class MlabListView(ListAPIView):
 
 
 class MlabDetailView(RetrieveAPIView):
+    permission_classes = [
+        permissions.IsAuthenticated,
+    ]
     queryset = Mlab.objects.all()
     serializer_class = MlabSerializer
