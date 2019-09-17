@@ -11,6 +11,7 @@ class Mlab(models.Model):
     clinical_condition = models.CharField(max_length=255)
     session_videos = models.CharField(max_length=255)
     session_drs = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.mLab_name
